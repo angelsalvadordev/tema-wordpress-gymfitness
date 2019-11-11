@@ -1,0 +1,144 @@
+/*
+  Theme Name: Gymfitness
+  Theme URI: 
+  Author: Angel S.
+  Author URI: http://google.com
+  Description: Theme diseñado para Gymfitness
+  Version: 1.0
+  Licence: GNU General Public Licence v2 or later
+  Licence URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: Gym, gimnasio, flexbox, grid, mobile first
+  Text Domain: gymfitness
+*/
+
+/* body{
+  background-color: red;
+} */
+
+:root{
+  /* Fonts */
+  --main-font: 'Staatliches', cursive;
+  --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Colors */
+  --primary-color: #ff5b00;
+  --dark-gray: #2f2e2e;
+  --light-gray: #ebebeb;
+  --white: #fff;
+  --black: #000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Now 10px = 1rem! */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px; /* px fallback */
+  font-size: 1.6rem; /* default font-size for document */
+  line-height: 2; /* a nice line-height */
+}
+
+h1,h2,h3,h4{
+  font-family: var(--main-font);
+  margin: 1rem 0;
+  line-height: 1.2;  
+}
+
+h1{
+  font-size: 6rem;
+}
+h2{
+  font-size: 4.8rem;
+}
+h3{
+  font-size: 3.6rem;
+}
+h4{
+  font-size: 2.4rem;
+}
+
+/* Globals */
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor{
+  max-width:1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.site-header{
+  background-color: var(--dark-gray);
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .barra-navegacion{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.menu-principal{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-principal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu-principal .menu{
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu-principal li{
+    margin-right: 2rem;
+  }
+  .menu-principal li:last-of-type{
+    margin-right: 0;
+  }
+}
+
+
+.menu-principal a{
+  font-family: var(--main-font);
+  color: var(--white);
+  font-size: 2.2rem;
+  padding: .5rem 2rem;
+}
+
+@media (min-width: 768px) {
+  .menu-principal a{
+    font-size: 2.6rem;
+  }
+}
+
+.menu-principal .current_page_item{
+  border-bottom: 3px solid var(--primary-color);
+}
